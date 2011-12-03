@@ -1,6 +1,7 @@
 package bastanteo;
 
 
+
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
