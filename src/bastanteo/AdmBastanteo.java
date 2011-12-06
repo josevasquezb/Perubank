@@ -1,5 +1,5 @@
 package bastanteo;
-
+//clase admBastanteo.java
 import java.util.ArrayList;
 import java.util.List;
 
