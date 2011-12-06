@@ -8,7 +8,6 @@ public class AdmRolTest {
 
 	@Test
 	public void siIngresoDatosDeberiaRegistarRol() throws  MensajeException{
-
 		//Preparo el Escenario
 		String codigoRol = "R001";
 		String descripcionRol = "Supervisor";
@@ -18,7 +17,6 @@ public class AdmRolTest {
 		boolean accesoMenuUsuarios = true;		
 
 		AdmRoles adm = new AdmRoles();
-		
 		//ejecutar
 		adm.registrarRol(codigoRol, descripcionRol, accesoMenuClientes,
 				accesoMenuPoderes, accesoMenuBastanteo, accesoMenuUsuarios);
