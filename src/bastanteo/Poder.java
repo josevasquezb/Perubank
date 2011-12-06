@@ -2,7 +2,7 @@ package bastanteo;
 
 public class Poder {
 
-	private String codigoPoder; //CHCO, EFRE, OTRO
+	private String codigoPoder; //CHCO, EFRE
 	private String nombrePoder; //Cobro de Cheques, Retiro en Efectivo
 	private String tipoPoder; //Activo, Pasivo
 
