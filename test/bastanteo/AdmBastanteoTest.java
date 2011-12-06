@@ -72,6 +72,17 @@ public class AdmBastanteoTest {
 		//ejecutar
 		adm.registrarBastanteo(codigoBastanteo,grupoBastanteo, codigoCliente, tipoDocumento,
 				nroDocumento,tipoIntervencion,importe,fechaVencimiento);
+
+		
+		//Preparo el Escenario con otro codigo pero mismo grupo, cliente
+		codigoBastanteo = "B0002";
+		grupoBastanteo = "A";
+		codigoCliente = "CL001";
+		tipoDocumento = "DNI";
+		nroDocumento = "40341631";
+		tipoIntervencion = "A Sola firma";
+		importe = 300;
+		fechaVencimiento = "05/05/2012";
 		
 		//Lo vuelvo a ejecutar para probar el error
 		adm.registrarBastanteo(codigoBastanteo,grupoBastanteo, codigoCliente, tipoDocumento,
