@@ -2,18 +2,18 @@ package bastanteo;
 
 public class Cliente {
 
-	private String codigo;  //Codigo Autogenerado
+	private String codigoCliente;  //Codigo Autogenerado
 	private String ruc;
 	private String razonSocial;
 	private String fechaInicio;
 	private String tipoEmpresa;
 	private int empleados;
 
-	public Cliente(String codigo, String ruc, String razonSocial,
+	public Cliente(String codigoCliente, String ruc, String razonSocial,
 			String fechaInicio, String tipoEmpresa, int empleados) {
 		// TODO Auto-generated constructor stub
 		super();
-		this.codigo = codigo;
+		this.codigoCliente = codigoCliente;
 		this.ruc = ruc;
 		this.razonSocial = razonSocial;
 		this.fechaInicio = fechaInicio;
@@ -21,9 +21,9 @@ public class Cliente {
 	    this.empleados = empleados;
 	}
 
-	public String getCodigo() {
+	public String getCodigoCliente() {
 		// TODO Auto-generated method stub
-		return codigo;
+		return codigoCliente;
 	}
 
 	public String getRuc() {

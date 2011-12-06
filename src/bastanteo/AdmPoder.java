@@ -12,7 +12,6 @@ public class AdmPoder {
 	public AdmPoder(){
         //Interface =  Clase 
 		poderes = new ArrayList<Poder>();
-		
 	}
 
 	
@@ -70,5 +69,4 @@ public class AdmPoder {
 			if(poder.getCodigoPoder().equals(codigoPoder))
 			   return poder;
 		return null; 	}
-	
 }

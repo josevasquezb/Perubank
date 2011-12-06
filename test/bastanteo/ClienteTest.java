@@ -13,17 +13,17 @@ public class ClienteTest {
 		//Arrange
 		//Preparar los datos de prueba
 		String ruc = "20107012011";
-		String codigo = "CL001";
+		String codigoCliente = "CL001";
 		String razonSocial = "ACME Solutions";
 		String fechaInicio = "01/01/2011";
 		String tipoEmpresa = "SAC";
 		int empleados = 10;
 		
 		//Ejecuto el escenario
-		Cliente cliente = new Cliente(codigo,ruc,razonSocial,fechaInicio,tipoEmpresa,empleados);
+		Cliente cliente = new Cliente(codigoCliente,ruc,razonSocial,fechaInicio,tipoEmpresa,empleados);
 		
 		//Verifico
-		assertEquals(codigo,cliente.getCodigo());
+		assertEquals(codigoCliente,cliente.getCodigoCliente());
 		assertEquals(ruc,cliente.getRuc());
 		assertEquals(razonSocial,cliente.getRazonSocial());
 		assertEquals(fechaInicio,cliente.getFechaInicio());

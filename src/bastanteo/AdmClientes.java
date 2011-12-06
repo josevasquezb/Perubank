@@ -15,42 +15,42 @@ public class AdmClientes {
 		
 	}
 	
-	public void registrarCliente(String codigo, String ruc, String razonSocial,
+	public void registrarCliente(String codigoCliente, String ruc, String razonSocial,
 			String fechaInicio, String tipoEmpresa, int empleados) throws MensajeException {
 		
 		//validar datos
-		validarDatos(codigo, ruc, razonSocial, fechaInicio, tipoEmpresa);
+		validarDatos(codigoCliente, ruc, razonSocial, fechaInicio, tipoEmpresa);
 		
 		//validar que haya duplicados
-		validaDuplicado(codigo, ruc);
+		validaDuplicado(codigoCliente, ruc);
 		
 		
 		//Creamos un Cliente
-		Cliente nuevoCliente = new Cliente(codigo,ruc,razonSocial,fechaInicio,tipoEmpresa,empleados);
+		Cliente nuevoCliente = new Cliente(codigoCliente,ruc,razonSocial,fechaInicio,tipoEmpresa,empleados);
 		//añade a la lista
 		clientes.add(nuevoCliente);
 	}
 
-	private void validaDuplicado(String codigo, String ruc)
+	private void validaDuplicado(String codigoCliente, String ruc)
 			throws  MensajeException {
-		boolean existe = clienteExiste(codigo, ruc);
+		boolean existe = clienteExiste(codigoCliente, ruc);
 			
 		if (existe) throw new  MensajeException("Cliente Duplicado");
 	}
 
-	private boolean clienteExiste(String codigo, String ruc) {
+	private boolean clienteExiste(String codigoCliente, String ruc) {
 		boolean existe = false;
 		// and = &&  ,  or = ||
 		for(Cliente cliente : clientes)
-			if (cliente.getCodigo().equals(codigo) || cliente.getRuc().equals(ruc))
+			if (cliente.getCodigoCliente().equals(codigoCliente) || cliente.getRuc().equals(ruc))
 				existe = true;
 		return existe;
 	}
 
-	private void validarDatos(String codigo, String ruc, String razonSocial,
+	private void validarDatos(String codigoCliente, String ruc, String razonSocial,
 			String fechaInicio, String tipoEmpresa) throws  MensajeException {
 		String mensaje = "";
-		if(codigo.equals(""))
+		if(codigoCliente.equals(""))
 		  mensaje += "Codigo no puede ser vacio";
 		if(ruc.equals(""))
 			  mensaje += "/nRuc no puede ser vacio";
@@ -64,10 +64,10 @@ public class AdmClientes {
 			   throw new  MensajeException(mensaje);
 	}
 
-	public Cliente buscarCliente(String codigo) {
+	public Cliente buscarCliente(String codigoCliente) {
 		// TODO Auto-generated method stub
 		for(Cliente cliente : clientes)
-			if(cliente.getCodigo().equals(codigo))
+			if(cliente.getCodigoCliente().equals(codigoCliente))
 			   return cliente;
 		return null; 
 	}
