@@ -8,6 +8,7 @@ public class AdmRolTest {
 
 	@Test
 	public void siIngresoDatosDeberiaRegistarRol() throws  MensajeException{
+
 		//Preparo el Escenario
 		String codigoRol = "R001";
 		String descripcionRol = "Supervisor";
@@ -23,13 +24,15 @@ public class AdmRolTest {
 				accesoMenuPoderes, accesoMenuBastanteo, accesoMenuUsuarios);
 		Rol rol =  adm.buscarRol(codigoRol);
 
-		//Verificar
+		//Verificar que no sea nulo
 		assertNotNull(rol);
 	}
 
+	
 	//Este test expera que haya una exception de tipo....
 	@Test(expected=MensajeException.class)
 	public void deberiaValidarDatosRequeridos() throws  MensajeException{
+		
 		//Preparo el Escenario
 		String codigoRol = "";
 		String descripcionRol = "";
@@ -45,8 +48,10 @@ public class AdmRolTest {
 				accesoMenuPoderes, accesoMenuBastanteo, accesoMenuUsuarios);
 	}
 	
+	
 	@Test(expected=MensajeException.class)
 	public void noDeberiaRegistarRolDuplicados() throws  MensajeException{
+		
 		//preparar el ejemplo
 		String codigoRol = "R001";
 		String descripcionRol = "Supervisor";
