@@ -5,7 +5,6 @@ import java.util.List;
 
 public class AdmUsuarios {
     
-	//1ero definino mi lista de un tipo de dato	
 	List<Usuario> usuarios;
 	
 	//2do En el constructor inicializo para que no salga NullPointerException
