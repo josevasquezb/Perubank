@@ -119,5 +119,21 @@ public class AdmBastanteo {
 			}
 		return null; 	
 	}
+
+
+
+	public Bastanteo listaBastanteos(String codigoCliente,
+			String tipoDocumento, String nroDocumento, String grupoBastanteo) {
+
+		for(Bastanteo bastanteo : bastanteos)
+			if (bastanteo.getCodigoCliente().equals(codigoCliente) &&
+					bastanteo.getTipoDocumento().equals(tipoDocumento) &&
+					bastanteo.getNroDocumento().equals(nroDocumento) &&
+					bastanteo.getGrupoBastanteo().equals(grupoBastanteo))
+			{
+				System.out.println("Lista:" + bastanteo.getCodigoBastanteo());
+			}
+		return null; 	
+	}
 }
 
