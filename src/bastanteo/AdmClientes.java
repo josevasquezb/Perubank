@@ -65,7 +65,6 @@ public class AdmClientes {
 	}
 
 	public Cliente buscarCliente(String codigoCliente) {
-		// TODO Auto-generated method stub
 		for(Cliente cliente : clientes)
 			if(cliente.getCodigoCliente().equals(codigoCliente))
 			   return cliente;
@@ -73,5 +72,11 @@ public class AdmClientes {
 	}
 
 	
+	public Cliente buscarClientexRuc(String ruc) {
+		for(Cliente cliente : clientes)
+			if(cliente.getRuc().equals(ruc))
+			   return cliente;
+		return null; 
+	}
 	
 }

@@ -10,10 +10,11 @@ public class Bastanteo {
 	private String tipoIntervencion;
 	private long importe;
 	private String fechaVencimiento;
+	private String codigoPoder;
 
 	public Bastanteo(String codigoBastanteo, String grupoBastanteo, String codigoCliente,
 			String tipoDocumento, String nroDocumento, String tipoIntervencion,
-			long importe, String fechaVencimiento) {
+			long importe, String fechaVencimiento, String codigoPoder) {
 		super();
 		this.codigoBastanteo = codigoBastanteo;
 		this.grupoBastanteo = grupoBastanteo;
@@ -23,6 +24,7 @@ public class Bastanteo {
 		this.tipoIntervencion = tipoIntervencion;
 		this.importe = importe;
 		this.fechaVencimiento = fechaVencimiento;
+		this.codigoPoder = codigoPoder;
 	}
 
 	public String getCodigoBastanteo() {
@@ -55,5 +57,9 @@ public class Bastanteo {
 
 	public String getFechaVencimiento() {
 		return fechaVencimiento;
+	}
+	
+	public String getCodigoPoder() {
+		return codigoPoder;
 	}
 }

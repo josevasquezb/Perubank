@@ -18,10 +18,11 @@ public class BastanteoTest {
 		String tipoIntervencion = "A Sola firma";
 		long importe = 200;
 		String fechaVencimiento = "05/05/2012";
+		String codigoPoder = "CHCO";
 
 		//Ejecuto el escenario
 		Bastanteo bastanteo = new Bastanteo(codigoBastanteo, grupoBastanteo,codigoCliente,
-				tipoDocumento,nroDocumento,tipoIntervencion,importe,fechaVencimiento);
+				tipoDocumento,nroDocumento,tipoIntervencion,importe,fechaVencimiento, codigoPoder);
 		
 		//Verifico
 		assertEquals(codigoBastanteo,bastanteo.getCodigoBastanteo());
@@ -32,5 +33,6 @@ public class BastanteoTest {
 		assertEquals(tipoIntervencion,bastanteo.getTipoIntervencion());
 		assertEquals(importe,bastanteo.getImporte());
 		assertEquals(fechaVencimiento,bastanteo.getFechaVencimiento());
+		assertEquals(codigoPoder,bastanteo.getCodigoPoder());
 	}
 }

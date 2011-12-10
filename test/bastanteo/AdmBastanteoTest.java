@@ -18,12 +18,13 @@ public class AdmBastanteoTest {
 		String tipoIntervencion = "A Sola firma";
 		long importe = 200;
 		String fechaVencimiento = "05/05/2012";
+		String codigoPoder = "CHCO";
 		
 		AdmBastanteo adm = new AdmBastanteo();
 		
 		//ejecutar
 		adm.registrarBastanteo(codigoBastanteo, grupoBastanteo, codigoCliente, tipoDocumento,
-				nroDocumento,tipoIntervencion,importe,fechaVencimiento);
+				nroDocumento,tipoIntervencion,importe,fechaVencimiento,codigoPoder);
 		
 		Bastanteo bastanteo = adm.buscarBastanteo(codigoBastanteo);
 		
@@ -45,12 +46,13 @@ public class AdmBastanteoTest {
 		String tipoIntervencion = "";
 		long importe = 0;
 		String fechaVencimiento = "";
+		String codigoPoder = "";
 		
 		AdmBastanteo adm = new AdmBastanteo();
 		
 		//ejecutar
 		adm.registrarBastanteo(codigoBastanteo, grupoBastanteo, codigoCliente, tipoDocumento,
-				nroDocumento,tipoIntervencion,importe,fechaVencimiento);
+				nroDocumento,tipoIntervencion,importe,fechaVencimiento,codigoPoder);
 	}
 	
 	
@@ -66,12 +68,13 @@ public class AdmBastanteoTest {
 		String tipoIntervencion = "A Sola firma";
 		long importe = 200;
 		String fechaVencimiento = "05/05/2012";
+		String codigoPoder = "CHCO";
 		
 		AdmBastanteo adm = new AdmBastanteo();
 		
 		//ejecutar
 		adm.registrarBastanteo(codigoBastanteo,grupoBastanteo, codigoCliente, tipoDocumento,
-				nroDocumento,tipoIntervencion,importe,fechaVencimiento);
+				nroDocumento,tipoIntervencion,importe,fechaVencimiento,codigoPoder);
 
 		
 		//Preparo el Escenario con otro codigo pero mismo grupo, cliente
@@ -80,12 +83,13 @@ public class AdmBastanteoTest {
 		codigoCliente = "CL001";
 		tipoDocumento = "DNI";
 		nroDocumento = "40341631";
-		tipoIntervencion = "A Sola firma";
+		tipoIntervencion = "En Conjunto";
 		importe = 300;
 		fechaVencimiento = "05/05/2012";
+		codigoPoder = "CHCO";
 		
 		//Lo vuelvo a ejecutar para probar el error
 		adm.registrarBastanteo(codigoBastanteo,grupoBastanteo, codigoCliente, tipoDocumento,
-				nroDocumento,tipoIntervencion,importe,fechaVencimiento);
+				nroDocumento,tipoIntervencion,importe,fechaVencimiento,codigoPoder);
 	}
 }

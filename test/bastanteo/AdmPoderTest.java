@@ -10,7 +10,7 @@ public class AdmPoderTest {
 	public void siIngresoDatosDeberiaRegistrarPoderes() throws MensajeException{
 		//Preparo el Escenario
 		String codigoPoder = "CHCO";
-		String nombrePoder = "Cobreo de Cheques";
+		String nombrePoder = "Cobro de Cheques";
 		String tipoPoder = "Activo";
 		
 		AdmPoder adm = new AdmPoder();
@@ -45,7 +45,7 @@ public class AdmPoderTest {
 		
 		//Preparo el Escenario
 		String codigoPoder = "CHCO";
-		String nombrePoder = "Cobreo de Cheques";
+		String nombrePoder = "Cobro de Cheques";
 		String tipoPoder = "Activo";
 		
 		AdmPoder adm = new AdmPoder();
